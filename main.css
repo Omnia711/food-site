@@ -1,0 +1,894 @@
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+list-style: none;
+text-decoration: none;
+scroll-behavior: smooth;
+}
+body{ font-family: 'Open Sans', sans-serif;
+}
+#nav .container{
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+align-content: center;
+padding: 1.5% 10%;
+width: 100%;
+background-color: #FFFFFF;
+margin: 0px auto;
+position: fixed;
+top: 0;
+left: 0;
+z-index: 999;
+box-shadow: 0px 0px 14px 0px #0000001b;
+}
+#nav .container ul{
+display: flex;
+padding: 10px 15px;
+}
+#nav .container ul li {padding-inline: 15px;}
+#nav .container ul li a{
+color: #838282;
+text-align: left;
+font-size: 18px;
+font-weight: 600;
+position: relative;
+top: 0;
+left: 0;
+transition: width 5s;}
+
+
+#nav .container .nav-list ul li a:hover{
+color: #000;
+}
+#nav .container .nav-list ul .active{
+box-shadow: inset 0 -3px 0 #CE1212;
+color: #000;
+padding-bottom: 5px;
+}
+#nav .container ul li a:hover::before{
+content: '';
+width: 100%;
+height: 100%;
+position: absolute;
+left: 0;
+top: 5px;
+box-shadow: inset 0 -3px 0 #CE1212;
+animation-duration: .5s;
+animation-name: brdr;
+}
+@keyframes brdr{
+from{width: 0%;}
+To{width: 100%;}
+}
+
+#nav .container h1 a{
+font-weight: 700;
+color: #212529;
+font-size: 32px;
+text-align: start;
+}
+#nav .container h1 a span{
+color:#CE1228;}
+#nav .container .moon-icon i{
+font-size: 30px;
+color: #000;
+padding: 10px;
+}
+
+/* Startig home section */
+#home{
+padding-top: 5%;
+height: 100vh;
+width: 100%;
+background-color: #EEEEEE;
+display: flex;
+align-items: center;
+}
+#home .container{
+display: flex;
+flex-wrap: no-wrap;
+justify-content: space-evenly;
+align-content: center;
+align-items: center;
+flex-direction: row-reverse;
+width: 100%;
+}
+#home .container .home-img{
+width:45%;
+margin-block: 5%;
+margin-inline: 10%;
+}
+#home .container .text{
+width: 50%;
+margin-left: 10%;}
+
+#home .container .home-img img{
+width: 100%;
+filter: drop-shadow(4px 4px 9px #000a);
+transition: all 1s;}
+
+#home .container .home-img img:hover {
+animation: shake .5s infinite;
+}
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+#home .container .text h2{
+font-family:'Amatic SC', sans-ser ;
+font-size:72px ;
+font-weight: 700;
+text-align: start;
+color: #37373F;
+}
+#home .container .text p{
+    line-height: 25.6px;
+    margin: 20px 0px;
+    text-align: start;
+    padding-right: 15%;
+    line-height: 1.6;
+    font-size: 1rem;
+    color: #4f4f5a;
+} 
+
+
+#home .container .btn1{
+background-color: #CE1212;
+border: 1px solid #CE1212;
+border-radius: 0 50px 50px 50px;
+padding: 12px 25px;
+margin-right: 8%;
+}
+#home .container .btn1 a{
+color:#fff;
+font-size: 17px;}
+
+
+#home .container .btn2 a{
+color:#000;
+font-size: 18px;
+font-weight: 600;
+}
+
+#home .container .btn2 i{
+height: 20px;
+width: 15px;
+padding:16px 20px 10px 20px ;
+position: relative;
+top: 3px;
+left: 0;
+border-radius: 50%;
+}
+
+#home .container .btn2 i::after{
+content: '';
+width: 20px;
+height: 20px;
+border-radius: 200px;
+border: 7px solid #EEEEEE;
+border-right: 8px solid #CE1212;
+border-bottom: 8px solid #CE1212;
+transform:rotate(-222deg);
+position: absolute;
+top: -3px;
+right: 0;
+left: -5px;
+padding: 10px;
+}
+#home .container .btn2 .btn2-text{
+padding-left: 20px;
+}
+#home .container .btn1:hover{
+background-color: #E61414;}
+
+#home .container .btn2:hover a{
+color: #E61414;}
+
+/* startin Chefs section  */
+#Chefs{
+margin-top:5% ;
+} 
+#Chefs .caption{
+background-color: #fff;
+text-align: center;
+padding-block: 30px;
+}
+
+#Chefs .caption h2{
+color:RGB(127, 127, 144);
+font-size:15px;
+font-family: 'Inter', sans-serif;
+text-decoration:none solid rgb(127, 127, 144);
+font-weight: 400;
+}
+#Chefs .caption p{
+color:RGB(33, 37, 41);
+font-size:55px;
+font-family: 'Amatic SC', sans-serif;
+text-decoration:none solid rgb(33, 37, 41);
+}
+#Chefs .caption span{
+color:RGB(206, 18, 18);
+font-size:55px;
+font-family: 'Amatic SC', sans-serif;
+text-decoration:none solid rgb(206, 18, 18);
+}
+#Chefs .Chefs-cards{
+display: flex;
+padding-block: 20px;
+padding-inline: 20px;
+justify-content: space-evenly;
+margin-inline: 70px;
+}
+#Chefs .Chefs-cards .Chef{
+text-align: center;
+width: 33%;
+border-radius: 8px;
+margin-inline: 20px;
+overflow: hidden;
+position: relative;
+top: 0;
+left: 0;
+transition: all .5s;
+box-shadow: 3px 3px 15px 0px rgba(0, 0, 0, 0.1);
+}
+#Chefs .Chefs-cards .Chef:hover {
+transform: scale(1.07);}
+
+#Chefs .Chefs-cards .Chef img{
+width: 100%;
+}
+#Chefs .Chefs-cards .Chef svg{
+position: absolute;
+top: 52%;
+left: 0;
+}
+
+#Chefs .Chefs-cards .Chef h3{
+color: RGB(33, 37, 41);
+font-size: 21px;
+font-family: 'Inter', sans-serif;
+font-weight: 700;
+padding-top: 10px;
+}
+#Chefs .Chefs-cards .Chef span{
+color: RGB(127, 127, 144);
+font-size: 14px;
+margin:5px 0px 10px;
+line-height: 30px;
+}
+#Chefs .Chefs-cards .Chef p{
+color:RGB(127, 127, 144);
+font-size: 15px;
+line-height: 25px;
+padding-inline: 30px;
+margin-bottom: 30px;
+}
+
+#Chefs .Chefs-cards .Chef .Chefs-image{
+position: relative;
+top:0;
+right:0;
+overflow: hidden;
+}
+#Chefs .Chefs-cards .Chef .Chefs-image .layer{
+position: absolute;
+top:20%;
+right: 100%;
+background-color:#e5dfd8b0;
+border: 1px transparent;
+border-radius: 5px;
+width: 12%;
+height: 50%;
+transition: right .5s .3s;
+}
+
+#Chefs .Chefs-cards .Chef .Chefs-image:hover .layer{
+right: 5%;
+}
+#Chefs .Chefs-cards .Chef .Chefs-image .layer li{padding-block: 10px;}
+#Chefs .Chefs-cards .Chef .Chefs-image .layer li i{
+color:#99989c;
+font-size: 20px;
+padding-block: 5px;
+}
+
+#Chefs .Chefs-cards .Chef .Chefs-image .layer li i:hover{
+color:#4B4A50 ;
+}
+/* starting Gallery section  */
+#Gallery{
+width: 100%;
+margin-top:15% ;
+padding-bottom: 3%;
+background-color: #EEEEEE;
+} 
+#Gallery .caption{
+background-color:#EEEEEE;
+text-align: center;
+margin-top:15% ;
+padding-bottom: 2%;
+padding-top: 5%;
+}
+
+#Gallery .caption h2{
+color:RGB(127, 127, 144);
+font-size:15px;
+font-family: 'Inter', sans-serif;
+text-decoration:none solid rgb(127, 127, 144);
+font-weight: 400;
+}
+#Gallery .caption p{
+color:RGB(33, 37, 41);
+font-size:55px;
+font-family: 'Amatic SC', sans-serif;
+text-decoration:none solid rgb(33, 37, 41);
+}
+#Gallery .caption span{
+color:RGB(206, 18, 18);
+font-size:55px;
+font-family: 'Amatic SC', sans-serif;
+text-decoration:none solid rgb(206, 18, 18);
+}
+
+#Gallery .photos {
+--gap: 20px;
+height: 72.8125rem;
+display: flex;
+flex-direction: column;
+flex-wrap: wrap;
+gap:20px;
+margin-inline: 8%;
+}
+
+#Gallery .photos picture {
+width: calc(calc(100% - var(--gap) * 2) / 3);
+border: 4px solid #fff;
+position: relative;
+overflow: hidden;
+}
+
+#Gallery .photos picture img {
+width: 100%;
+transition: scale .5s;
+}
+
+#Gallery .photos picture .layer {
+width: 100%;
+height: 100%;
+padding: 15px;
+background-color: #00000096;
+position: absolute;
+top: 100%;
+left: 0;
+z-index: 99;
+display: flex;
+flex-direction: column;
+gap: 5px;
+justify-content: center;
+align-items: center;
+color: #fff;
+transition: top .5s;
+}
+
+#Gallery .photos picture .layer p {
+color: #ddd;
+text-align: center;
+}
+
+#Gallery .photos picture:hover img {
+scale: 1.1;
+}
+
+#Gallery .photos picture:hover .layer {
+top: 0;}
+
+/* starting contact section  */
+#contact{
+width: 100%;
+margin-bottom: 5%;
+} 
+#contact .caption{
+text-align: center;
+padding-bottom: 2%;
+padding-top: 2%;
+}
+
+#contact .caption h2{
+color:RGB(127, 127, 144);
+font-size:15px;
+font-family: 'Inter', sans-serif;
+text-decoration:none solid rgb(127, 127, 144);
+font-weight: 400;
+text-transform: capitalize;
+}
+#contact .caption p{
+color:RGB(33, 37, 41);
+font-size:55px;
+font-family: 'Amatic SC', sans-serif;
+text-decoration:none solid rgb(33, 37, 41);
+text-transform: capitalize;
+}
+#contact .caption span{
+color:RGB(206, 18, 18);
+font-size:55px;
+font-family: 'Amatic SC', sans-serif;
+text-decoration:none solid rgb(206, 18, 18);
+}
+#contact .mapouter{
+margin:auto;
+box-shadow:0px 0px 9px rgba(0, 0, 0, 0.527);
+margin-bottom: 3%;
+}
+
+#contact .details {
+--gap: 15px;
+margin-block:0;
+margin-inline:3.5%;
+padding-inline: 10%;
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+gap: 1.2;
+}
+
+#contact .details > div {
+width: calc(calc(100% - 15px) / 2);
+display: flex;
+align-items: center;
+padding: 1.5625rem;
+background-color:#F5F5F5;
+margin-block: 5px;
+margin-inline: 3px;}
+
+#contact .details > div h3 {
+color: #7d7d7d;
+font-size: 1.25rem;
+font-weight: 700;
+margin: 0 0 5px 0;
+}
+#contact .details > div  a {
+color:#000;}
+#contact .details .icon {
+min-width: 3.125rem;
+min-height: 3.125rem;
+background-color: #CE1212;
+border-radius: 50%;
+display: flex;
+justify-content: center;
+align-items: center;
+margin-right: 10px;
+}
+
+#contact .details .icon i {
+color: white;
+font-size: 18px;
+}
+
+
+#contact  form {
+gap:15px; 
+text-align: center; 
+display: flex;
+flex-direction: column;
+align-items: center;
+box-shadow: 0 0 10px #70707063;
+margin-inline: 13.8%;
+margin-top: 2%;
+padding:20px;
+}
+#contact  form .input-group {
+width: 100%;
+box-sizing: border-box;
+display: flex; 
+justify-content: space-between;
+flex-wrap: wrap;}
+
+#contact  form .input-group input, textarea{
+width: 49.5%;
+display: inline-block;
+padding: 18px 20px ;
+line-height: 1.5;
+border: 3px solid #E8E3E3;
+transition: border-color .3s;
+resize: none;
+}
+#contact  form  textarea{
+min-height: 150px;
+max-height: 300px;
+resize: vertical;
+width: 100%; 
+}
+
+#contact  form .sub {
+width: 100%;
+display: inline-block;
+border: 3px solid #E8E3E3;
+}
+#contact  form .sub input{
+padding: 18px 20px ;
+width: 100%;
+line-height: 1.5;
+border: transparent;
+transition: border-color .3s;}
+
+
+#contact :is(form input, textarea):focus {
+outline: none;
+border: 3px solid rgb(216, 16, 49);}
+
+
+#contact form button[type="submit"] {
+padding: 15px 30px;
+margin: 10px 0;
+border: 1px solid transparent;
+border-radius: 25px;
+box-sizing: border-box;
+font-size: 16px;
+background-color:#CE1212;
+color: #fff;
+}  
+#contact form button[type="submit"]:hover {
+background-color:#E61414;}
+
+/* starting footer section  */
+
+footer {
+padding-block: 3%;
+padding-inline: 7%;
+background-image: linear-gradient(#0009, #0009),
+url('img/textured-metal-background.jpg');
+color: #fff;
+box-shadow: 0px -1px 5px #0007;
+background-size: contain;
+}
+
+footer .container {
+--gap: 20px;
+display: flex;
+flex-wrap: wrap;
+gap: 20px;
+}
+
+footer .container :is(.about, .contact-details) {
+width:28%;
+}
+
+footer .container :is(.subscription) {
+width: 40%;
+}
+
+footer .about div:nth-child(1) {
+display: flex;
+align-items: center;
+gap: 10px;
+}
+footer .about img {
+width: 40px;
+height: 40px;
+}
+footer .container .about h2{
+font-size: 30px;
+font-weight: 700;
+
+}
+footer .container .about h2 span{color: #CE0F0E;}
+
+footer .about p {
+margin-block: 10px;
+padding-right: 50px;
+font-size: 17px;
+line-height: 23px;
+}
+
+
+footer .about h3 {
+text-align: center;
+padding: 10px;
+border-bottom: 2px solid #ddd6;
+margin-bottom: 10px;
+font-size: 400px;
+font-family: 'Inter', sans-serif;
+font-size: 22px;
+
+}
+footer .about .social-links {
+padding: 15px;
+display: flex;
+justify-content: space-evenly;
+}
+
+footer .about .social-links i {
+font-size: 30px;
+color: #fff;
+}
+/* 2column */
+footer .box h3{
+font-size:22px;
+font-family: 'Inter', sans-serif;
+font-weight: 500;
+margin-top: 5px;
+}
+footer .box p {
+margin-block: 12px;
+font-size: 17px;
+line-height: 23px;
+padding-inline: 0;
+}
+
+footer .group {
+margin-block: 24px;
+display: flex;
+justify-content: space-between;
+gap: 5px;
+}
+
+footer .group input {
+flex-grow: 1;
+padding:10px ;
+}
+
+footer .group input:focus-visible {
+outline: none;
+}
+
+footer .group button {
+padding: 10px;
+border: none;
+min-width: 110px;
+background-color: RGB(206, 18, 18);
+color: #fff;
+font-size: 17px;
+cursor: pointer;
+transition: background-color .5s;
+}
+footer .group button:hover{background-color:#E61414;}
+
+footer .links h3{
+font-size: 400px;
+font-family: 'Inter', sans-serif;
+font-size: 22px;
+}
+footer .links ul {
+--gap: 20px;
+margin-top: 10px;
+display: flex;
+flex-wrap: wrap;
+column-gap: 20px;
+}
+
+footer .links ul li {
+width: calc(calc(100% - var(--gap)) / 2);
+columns: 2;
+padding: 5px;
+position: relative;
+transition: transform .5s, background-color .5s;
+}
+
+footer .links ul li:hover {
+transform: translateX(10px);
+background-color: #222;
+}
+footer .links ul li a{
+color: #fff;
+}
+
+footer .contact h3 {
+margin-bottom: 10px;
+font-size:22px;
+font-family: 'Inter', sans-serif;
+font-weight: 500;
+margin-top: 5px;
+}
+
+footer .contact ul li {
+display: flex;
+align-items: center;
+gap: 8px;
+}
+footer .contact ul li a{
+color: #fff;
+font-size: 17px;
+padding-inline: 0;
+}
+footer .contact ul li i {
+width: 40px;
+height: 40px;
+display: flex;
+justify-content: center;
+align-items: center;
+font-size: 25px;
+cursor: pointer;
+color: #CE1212;
+}
+
+/* Media Queriy */
+/* 1-small screen */
+@media (max-width: 575.98px) { 
+#nav .container ul{
+display: flex;
+padding: 10px 15px;
+margin-left: 15%;
+}
+#nav .container ul li {padding-inline:5px;}
+#nav .container .moon-icon i{
+    display: none;
+}
+#home .container .btn1{
+position: absolute;
+bottom: 20%;
+left: 55%;}
+#home .container{
+position: relative;
+top:0;
+}
+#home .container .btn2 {
+position: absolute;
+bottom: 10%;
+left: 55%;
+} 
+#Chefs .Chefs-cards{
+display: block;} 
+#Chefs .Chefs-cards .Chef{
+width: 100%;}
+#Gallery .photos {
+display: flex;
+/* columns: 2; */
+}
+#Gallery .photos picture{
+width: 50%;
+}
+#contact .details > div {
+width: 100%;}
+#contact .mapouter{
+width:90%;
+margin-inline: 5%;}
+
+footer .container :is(.about, .contact-details) {
+width:100%;
+}
+
+footer .container :is(.subscription) {
+width: 100%;
+}
+}
+
+/* 2-medium screen  */
+@media (min-width: 577px) and (max-width: 767.98px) { 
+#nav .container{
+background-color: #ffffff79;}
+#home .container .btn2 .btn2-text{
+padding-left: 20px;
+position: relative;
+top:-35px ;
+left: 75%;}
+
+#Chefs .Chefs-cards{
+display: block;
+}
+#Chefs .Chefs-cards .Chef{
+width: 100%;
+margin-block: 10px;
+}
+#Chefs .Chefs-cards .Chef svg{
+position: absolute;
+top: 58%;
+left: 0;
+}
+#Chefs .Chefs-cards .Chef h3{
+margin-top: 50px;
+}
+#Chefs .Chefs-cards .Chef .Chefs-image .layer {height: fit-content;
+width: 10%;}
+
+#Gallery .photos picture{
+width: 45%;
+display: flex;
+columns: 2;
+flex-direction: column;
+}
+#contact .mapouter{
+width:90%;
+margin-inline: 5%;}
+
+#contact .details > div {
+width:100%;}
+footer .container :is(.about, .contact-details) {
+width:100%;
+}
+footer .container :is(.subscription) {
+width: 100%;
+}
+}
+
+/* 3-large screen  */
+@media (min-width: 768px) and (max-width: 991.98px) { 
+#home .container .btn1{
+position: absolute;
+bottom: 15%;
+left: 45%;}
+#home .container{
+position: relative;
+top:0;
+}
+#home .container .btn2 {
+position: absolute;
+bottom: 5%;
+left: 45%;
+} 
+#Chefs .Chefs-cards{
+display: block;
+}
+#Chefs .Chefs-cards .Chef{
+width: 100%;
+margin-block: 10px;
+}
+#Chefs .Chefs-cards .Chef svg{
+position: absolute;
+top: 65.3%;
+left: 0;
+}
+
+#Chefs .Chefs-cards .Chef .Chefs-image .layer {height: fit-content;
+width: 10%;}
+
+#Gallery .photos picture {
+width: calc(calc(100% - var(--gap) * 2) /2.9);}
+#Gallery#Gallery .photos {
+margin-inline:0;
+padding-inline: 0;
+gap:0;
+}
+#contact .mapouter{
+width:90%;
+margin-inline: 5%;}
+#contact .details > div {
+    width:49%;
+}
+footer .container :is(.about, .contact-details) {
+    width:100%;
+}
+footer .container :is(.subscription) {
+width: 100%;
+}
+}
+
+/* 4- x-large screen  */
+@media (min-width: 992px) and (max-width: 1199.98px) { 
+#Chefs .Chefs-cards .Chef svg{
+display: none;
+}
+#contact .mapouter{
+width:90%;
+margin-inline: 5%;}
+footer .container :is(.about, .contact-details) {
+width:100%;
+}
+footer .container :is(.subscription) {
+width: 100%;
+}
+}
+
+/* 5- xx-large screen  */
+@media (min-width: 1200px) and (max-width: 1399.98px) { 
+#Chefs .Chefs-cards .Chef svg{
+display: none;
+}
+footer .container :is(.about, .contact-details) {
+width:100%;
+}
+footer .container :is(.subscription) {
+width: 100%;}
+}
+
